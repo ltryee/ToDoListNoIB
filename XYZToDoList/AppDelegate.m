@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XYZAddToDoItemViewController.h"
+#import "XYZToDoItemTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +23,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    UIViewController * rootViewController = [[XYZAddToDoItemViewController alloc] init];
+    UIViewController * toDoItemViewController = [[XYZToDoItemTableViewController alloc] init];
+    
+    UIViewController * rootViewController = [[UINavigationController alloc] initWithRootViewController:toDoItemViewController];
     self.window.rootViewController = rootViewController;
     
     return YES;

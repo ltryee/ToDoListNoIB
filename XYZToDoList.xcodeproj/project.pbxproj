@@ -12,6 +12,7 @@
 		40B0BA0919C7FD35009153D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B0BA0819C7FD35009153D4 /* Images.xcassets */; };
 		40B0BA1819C7FD35009153D4 /* XYZToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0BA1719C7FD35009153D4 /* XYZToDoListTests.m */; };
 		D6BB53D919C87D35003C7D6C /* XYZAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BB53D819C87D35003C7D6C /* XYZAddToDoItemViewController.m */; };
+		D6BB53E219C881BF003C7D6C /* XYZToDoItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BB53E119C881BF003C7D6C /* XYZToDoItemTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		40B0BA1719C7FD35009153D4 /* XYZToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZToDoListTests.m; sourceTree = "<group>"; };
 		D6BB53D719C87D35003C7D6C /* XYZAddToDoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZAddToDoItemViewController.h; sourceTree = "<group>"; };
 		D6BB53D819C87D35003C7D6C /* XYZAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZAddToDoItemViewController.m; sourceTree = "<group>"; };
+		D6BB53E019C881BF003C7D6C /* XYZToDoItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZToDoItemTableViewController.h; sourceTree = "<group>"; };
+		D6BB53E119C881BF003C7D6C /* XYZToDoItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZToDoItemTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				40B0B9FB19C7FD35009153D4 /* Supporting Files */,
 				D6BB53D719C87D35003C7D6C /* XYZAddToDoItemViewController.h */,
 				D6BB53D819C87D35003C7D6C /* XYZAddToDoItemViewController.m */,
+				D6BB53E019C881BF003C7D6C /* XYZToDoItemTableViewController.h */,
+				D6BB53E119C881BF003C7D6C /* XYZToDoItemTableViewController.m */,
 			);
 			path = XYZToDoList;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BB53E219C881BF003C7D6C /* XYZToDoItemTableViewController.m in Sources */,
 				40B0BA0119C7FD35009153D4 /* AppDelegate.m in Sources */,
 				40B0B9FE19C7FD35009153D4 /* main.m in Sources */,
 				D6BB53D919C87D35003C7D6C /* XYZAddToDoItemViewController.m in Sources */,
@@ -321,6 +327,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -332,6 +339,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

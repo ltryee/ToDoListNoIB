@@ -34,7 +34,17 @@
                                                                             30)];
     textField.placeholder = @"New to-do item";
     textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:textField];
+    
+    self.navigationItem.title = @"Add To-Do Item";
+    self.navigationItem.leftItemsSupplementBackButton = NO;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                          target:self
+                                                                                          action:@selector(unWindtoList:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                           target:self
+                                                                                           action:@selector(unWindtoList:)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,5 +63,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)unWindtoList:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end
