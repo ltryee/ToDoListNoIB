@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "XYZAddToDoItemViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,11 +21,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    UILabel * label = [[UILabel alloc] initWithFrame:self.window.bounds];
-    label.text = @"Hello World";
-    label.textAlignment = NSTextAlignmentCenter;
-    [self.window addSubview:label];
+
+    UIViewController * rootViewController = [[XYZAddToDoItemViewController alloc] init];
+    self.window.rootViewController = rootViewController;
     
     return YES;
 }

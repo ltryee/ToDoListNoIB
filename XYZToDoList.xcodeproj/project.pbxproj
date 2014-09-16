@@ -11,6 +11,7 @@
 		40B0BA0119C7FD35009153D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0BA0019C7FD35009153D4 /* AppDelegate.m */; };
 		40B0BA0919C7FD35009153D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B0BA0819C7FD35009153D4 /* Images.xcassets */; };
 		40B0BA1819C7FD35009153D4 /* XYZToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0BA1719C7FD35009153D4 /* XYZToDoListTests.m */; };
+		D6BB53D919C87D35003C7D6C /* XYZAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BB53D819C87D35003C7D6C /* XYZAddToDoItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,8 @@
 		40B0BA1119C7FD35009153D4 /* XYZToDoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYZToDoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B0BA1619C7FD35009153D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B0BA1719C7FD35009153D4 /* XYZToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZToDoListTests.m; sourceTree = "<group>"; };
+		D6BB53D719C87D35003C7D6C /* XYZAddToDoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZAddToDoItemViewController.h; sourceTree = "<group>"; };
+		D6BB53D819C87D35003C7D6C /* XYZAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZAddToDoItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				40B0BA0019C7FD35009153D4 /* AppDelegate.m */,
 				40B0BA0819C7FD35009153D4 /* Images.xcassets */,
 				40B0B9FB19C7FD35009153D4 /* Supporting Files */,
+				D6BB53D719C87D35003C7D6C /* XYZAddToDoItemViewController.h */,
+				D6BB53D819C87D35003C7D6C /* XYZAddToDoItemViewController.m */,
 			);
 			path = XYZToDoList;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			files = (
 				40B0BA0119C7FD35009153D4 /* AppDelegate.m in Sources */,
 				40B0B9FE19C7FD35009153D4 /* main.m in Sources */,
+				D6BB53D919C87D35003C7D6C /* XYZAddToDoItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
