@@ -11,7 +11,6 @@
 		40B0BA0119C7FD35009153D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0BA0019C7FD35009153D4 /* AppDelegate.m */; };
 		40B0BA0919C7FD35009153D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B0BA0819C7FD35009153D4 /* Images.xcassets */; };
 		40B0BA1819C7FD35009153D4 /* XYZToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0BA1719C7FD35009153D4 /* XYZToDoListTests.m */; };
-		40B0BA2319C7FECA009153D4 /* XYZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0BA2219C7FECA009153D4 /* XYZRootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +33,6 @@
 		40B0BA1119C7FD35009153D4 /* XYZToDoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYZToDoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B0BA1619C7FD35009153D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40B0BA1719C7FD35009153D4 /* XYZToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZToDoListTests.m; sourceTree = "<group>"; };
-		40B0BA2119C7FECA009153D4 /* XYZRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZRootViewController.h; sourceTree = "<group>"; };
-		40B0BA2219C7FECA009153D4 /* XYZRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZRootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +76,6 @@
 			children = (
 				40B0B9FF19C7FD35009153D4 /* AppDelegate.h */,
 				40B0BA0019C7FD35009153D4 /* AppDelegate.m */,
-				40B0BA2119C7FECA009153D4 /* XYZRootViewController.h */,
-				40B0BA2219C7FECA009153D4 /* XYZRootViewController.m */,
 				40B0BA0819C7FD35009153D4 /* Images.xcassets */,
 				40B0B9FB19C7FD35009153D4 /* Supporting Files */,
 			);
@@ -211,7 +206,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				40B0BA0119C7FD35009153D4 /* AppDelegate.m in Sources */,
-				40B0BA2319C7FECA009153D4 /* XYZRootViewController.m in Sources */,
 				40B0B9FE19C7FD35009153D4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +382,7 @@
 				40B0BA1D19C7FD35009153D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40B0BA1E19C7FD35009153D4 /* Build configuration list for PBXNativeTarget "XYZToDoListTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +391,7 @@
 				40B0BA2019C7FD35009153D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
