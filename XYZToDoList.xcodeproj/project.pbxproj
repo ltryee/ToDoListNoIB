@@ -13,6 +13,7 @@
 		40B0BA1819C7FD35009153D4 /* XYZToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0BA1719C7FD35009153D4 /* XYZToDoListTests.m */; };
 		D6BB53D919C87D35003C7D6C /* XYZAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BB53D819C87D35003C7D6C /* XYZAddToDoItemViewController.m */; };
 		D6BB53E219C881BF003C7D6C /* XYZToDoItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BB53E119C881BF003C7D6C /* XYZToDoItemTableViewController.m */; };
+		D6BB53E519CC5648003C7D6C /* XYZToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BB53E419CC5648003C7D6C /* XYZToDoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,8 @@
 		D6BB53D819C87D35003C7D6C /* XYZAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZAddToDoItemViewController.m; sourceTree = "<group>"; };
 		D6BB53E019C881BF003C7D6C /* XYZToDoItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZToDoItemTableViewController.h; sourceTree = "<group>"; };
 		D6BB53E119C881BF003C7D6C /* XYZToDoItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZToDoItemTableViewController.m; sourceTree = "<group>"; };
+		D6BB53E319CC5648003C7D6C /* XYZToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZToDoItem.h; sourceTree = "<group>"; };
+		D6BB53E419CC5648003C7D6C /* XYZToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZToDoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				D6BB53D819C87D35003C7D6C /* XYZAddToDoItemViewController.m */,
 				D6BB53E019C881BF003C7D6C /* XYZToDoItemTableViewController.h */,
 				D6BB53E119C881BF003C7D6C /* XYZToDoItemTableViewController.m */,
+				D6BB53E319CC5648003C7D6C /* XYZToDoItem.h */,
+				D6BB53E419CC5648003C7D6C /* XYZToDoItem.m */,
 			);
 			path = XYZToDoList;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6BB53E219C881BF003C7D6C /* XYZToDoItemTableViewController.m in Sources */,
+				D6BB53E519CC5648003C7D6C /* XYZToDoItem.m in Sources */,
 				40B0BA0119C7FD35009153D4 /* AppDelegate.m in Sources */,
 				40B0B9FE19C7FD35009153D4 /* main.m in Sources */,
 				D6BB53D919C87D35003C7D6C /* XYZAddToDoItemViewController.m in Sources */,
