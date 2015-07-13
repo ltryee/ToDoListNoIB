@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XYZToDoItemTableViewController : UITableViewController
+@class XYZToDoItem;
 
+@interface XYZToDoItemTableViewController : UITableViewController
+- (void)addToDoItem:(XYZToDoItem *)todoItem;
 @end

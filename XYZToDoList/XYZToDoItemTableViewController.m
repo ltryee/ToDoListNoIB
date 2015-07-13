@@ -10,7 +10,7 @@
 #import "XYZAddToDoItemViewController.h"
 #import "XYZToDoItem.h"
 
-@interface XYZToDoItemTableViewController ()
+@interface XYZToDoItemTableViewController ()<UINavigationControllerDelegate>
 @property NSMutableArray * toDoItems;
 @end
 
@@ -35,7 +35,6 @@
                                                                                            target:self
                                                                                            action:@selector(trigerAddToDoItem:)];
     self.toDoItems = [[NSMutableArray alloc] init];
-    [self loadInitialData];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ListPrototypeCell"];
 }
 
@@ -60,6 +59,11 @@
 - (void)trigerAddToDoItem:(id)sender {
     XYZAddToDoItemViewController * vc = [[XYZAddToDoItemViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)addToDoItem:(XYZToDoItem *)todoItem {
+    [self.toDoItems addObject:todoItem];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -144,5 +148,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end

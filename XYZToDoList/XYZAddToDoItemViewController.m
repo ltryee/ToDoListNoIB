@@ -7,9 +7,11 @@
 //
 
 #import "XYZAddToDoItemViewController.h"
+#import "XYZToDoItem.h"
+#import "XYZToDoItemTableViewController.h"
 
 @interface XYZAddToDoItemViewController ()
-
+@property (nonatomic, strong) UITextField *textField;
 @end
 
 @implementation XYZAddToDoItemViewController
@@ -36,6 +38,7 @@
     textField.borderStyle = UITextBorderStyleRoundedRect;
     textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:textField];
+    self.textField = textField;
     
     self.navigationItem.title = @"Add To-Do Item";
     self.navigationItem.leftItemsSupplementBackButton = NO;
@@ -65,6 +68,14 @@
 */
 
 - (void)unWindtoList:(id)sender {
+    if (sender == self.navigationItem.rightBarButtonItem && self.textField.text.length > 0) {
+        XYZToDoItem *todoItem = [[XYZToDoItem alloc] init];
+        todoItem.itemName = self.textField.text;
+        todoItem.completed = NO;
+        
+        XYZToDoItemTableViewController * vc = self.navigationController.viewControllers[0];
+        [vc addToDoItem:todoItem];
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 
