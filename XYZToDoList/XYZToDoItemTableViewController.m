@@ -35,6 +35,7 @@
                                                                                            target:self
                                                                                            action:@selector(trigerAddToDoItem:)];
     self.toDoItems = [[NSMutableArray alloc] init];
+    [self loadInitialData];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ListPrototypeCell"];
 }
 
@@ -45,15 +46,15 @@
 }
 
 - (void)loadInitialData {
-    XYZToDoItem *item1 = [[XYZToDoItem alloc] init];
-    item1.itemName = @"Buy milk";
-    [self.toDoItems addObject:item1];
-    XYZToDoItem *item2 = [[XYZToDoItem alloc] init];
-    item2.itemName = @"Buy eggs";
-    [self.toDoItems addObject:item2];
-    XYZToDoItem *item3 = [[XYZToDoItem alloc] init];
-    item3.itemName = @"Read a book";
-    [self.toDoItems addObject:item3];
+    NSString *path = [NSMutableString stringWithString:NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject];
+    path = [path stringByAppendingPathComponent:@"data.plist"];
+    NSArray *todoItems = [NSArray arrayWithContentsOfFile:path];
+    for (NSDictionary *item in todoItems) {
+        XYZToDoItem *todoItem = [[XYZToDoItem alloc] init];
+        todoItem.itemName = item[@"title"];
+        todoItem.completed = ((NSNumber *)item[@"completed"]).boolValue;
+        [self.toDoItems addObject:todoItem];
+    }
 }
 
 - (void)trigerAddToDoItem:(id)sender {
@@ -64,6 +65,21 @@
 - (void)addToDoItem:(XYZToDoItem *)todoItem {
     [self.toDoItems addObject:todoItem];
     [self.tableView reloadData];
+    
+    [self saveToLocal];
+}
+
+- (void)saveToLocal {
+    NSMutableArray *todoItems = [NSMutableArray array];
+    for (XYZToDoItem *item in self.toDoItems) {
+        [todoItems addObject:@{@"title" : item.itemName,
+                               @"completed" : @(item.completed),
+                               }];
+    }
+    NSString *path = [NSMutableString stringWithString:NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject];
+    path = [path stringByAppendingPathComponent:@"data.plist"];
+    NSLog(@"%s:\n%@", __func__, path);
+    [todoItems writeToFile:path atomically:YES];
 }
 
 #pragma mark - Table view data source
@@ -136,6 +152,7 @@
     XYZToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
     tappedItem.completed = !tappedItem.completed;
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    [self saveToLocal];
 }
 
 /*
